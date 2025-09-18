@@ -74,6 +74,3 @@ python3 portscanner.py
 - The scan starts from port **1** up to the number you specify.
 - Timeout per port is set to **0.5s** (can be adjusted in code).
 - Banner grabbing may fail silently if a service does not respond.
-
-## 📜 License
-This project is released under the MIT License. See the [LICENSE](LICENSE) file for details.
