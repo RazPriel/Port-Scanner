@@ -1,74 +1,79 @@
-# Port-Scanner
-A lightweight Python-based port scanner that checks for open ports and grabs service banners on specified hosts.
-This tool is intended for educational and authorized testing purposes only.
+# 🔎 Simple Python Port Scanner
 
-✨ Features
+A lightweight Python-based port scanner that checks for open ports and grabs service banners on specified hosts.  
+This tool is intended for **educational** and **authorized testing** purposes only.
 
-Scan a single IP or multiple targets at once.
+## ✨ Features
 
-Specify how many ports to scan (starting from port 1).
+- Scan a single IP or multiple targets at once.
+- Specify how many ports to scan (starting from port 1).
+- Automatically resolves hostnames to IP addresses.
+- Attempts to grab service banners for open ports.
 
-Automatically resolves hostnames to IP addresses.
-
-Attempts to grab service banners for open ports.
-
-⚠️ Legal Disclaimer
-
-This tool is built for educational purposes and authorized security testing only.
-Do not scan networks you don’t own or have explicit permission to test.
+## ⚠️ Legal Disclaimer
+This tool is built for **educational** purposes and **authorized security testing** only.  
+Do **not** scan networks you don’t own or have explicit permission to test.  
 The author is not responsible for misuse or damage.
 
-🛠️ Requirements
+## 🛠️ Requirements
 
-Python 3.x
-
-IPy
- module
+- Python 3.x
+- [IPy](https://pypi.org/project/IPy/) module  
 
 Install dependencies:
 
+```bash
 pip install IPy
+```
 
-🚀 Usage
+## 🚀 Usage
 
-Clone this repository:
+1. Clone this repository:
 
+```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
+```
 
+2. Run the script:
 
-Run the script:
-
+```bash
 python3 portscanner.py
+```
 
+3. Input your targets when prompted:  
 
-Input your targets when prompted:
+- For a single target:
 
-For a single target:
-
+```
 [+] Enter target/s to scan(split multiple targets with ,): 192.168.1.1
 [+] Enter amount of ports to scan(starting from 1): 1000
+```
 
+- For multiple targets:
 
-For multiple targets:
-
+```
 [+] Enter target/s to scan(split multiple targets with ,): 192.168.1.1, scanme.nmap.org
 [+] Enter amount of ports to scan(starting from 1): 500
+```
 
+4. The script will list open ports and (if available) their banners.
 
-The script will list open ports and (if available) their banners.
+## 📄 Example Output
 
-📄 Example Output
+```
 [ *** Scanning Target: 192.168.1.1 *** ]
 [!] Open port: 22 : SSH-2.0-OpenSSH_8.4
 [!] Open port: 80
 [!] Open port: 443 : HTTP/1.1 200 OK
 [!] All the scans are completed!
+```
 
-📝 Notes
+## 📝 Notes
 
-The scan starts from port 1 up to the number you specify.
+- The scan starts from port **1** up to the number you specify.
+- Timeout per port is set to **0.5s** (can be adjusted in code).
+- Banner grabbing may fail silently if a service does not respond.
 
-Timeout per port is set to 0.5s (can be adjusted in code).
-
-Banner grabbing may fail silently if a service does not respond.
+## 📜 License
+This project is released under the MIT License. See the [LICENSE](LICENSE) file for details.
