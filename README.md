@@ -1,7 +1,6 @@
 # 🔎 Simple Python Port Scanner
 
 A lightweight Python-based port scanner that checks for open ports and grabs service banners on specified hosts.  
-This tool is intended for **educational** and **authorized testing** purposes only.
 
 ## ✨ Features
 
@@ -9,11 +8,6 @@ This tool is intended for **educational** and **authorized testing** purposes on
 - Specify how many ports to scan (starting from port 1).
 - Automatically resolves hostnames to IP addresses.
 - Attempts to grab service banners for open ports.
-
-## ⚠️ Legal Disclaimer
-This tool is built for **educational** purposes and **authorized security testing** only.  
-Do **not** scan networks you don’t own or have explicit permission to test.  
-The author is not responsible for misuse or damage.
 
 ## 🛠️ Requirements
 
